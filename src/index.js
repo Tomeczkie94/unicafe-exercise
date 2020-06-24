@@ -23,6 +23,7 @@ const App = () => {
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
+  const all = good + neutral + bad
 
   const addGoodFeedback = (newFeedback) => {
     setGood(newFeedback)
@@ -44,9 +45,10 @@ const App = () => {
       <Button handleClick= {() => addBadFeedback(bad + 1)} text='Bad' />
 
       <Header text='Statistics' />
-      <Display text="Good"/> {good}
-      <Display text="Neutral"/> {neutral}
-      <Display text="Bad"/> {bad}
+      <Display text="Good" /> {good}
+      <Display text="Neutral" /> {neutral}
+      <Display text="Bad" /> {bad}
+      <Display text="All" /> {all}
     </div>
   )
 }
