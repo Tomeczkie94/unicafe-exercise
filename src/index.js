@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const Header = () => {
+const Header = (props) => {
   return (
-      <h1>Give Feedback</h1>
+      <h1>{props.text}</h1>
   )
 }
 
@@ -35,13 +35,12 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+      <Header text='Give feedback' />
       <Button handleClick= {() => addGoodFeedback(good + 1)} text='Good' />
       <Button handleClick= {() => addNeutralFeedback(neutral + 1)} text='Neutral' />
       <Button handleClick= {() => addBadFeedback(bad + 1)} text='Bad' />
 
-      <Header />
-      // This header will state: Statistics
+      <Header text='Statistics' />
     </div>
   )
 }
