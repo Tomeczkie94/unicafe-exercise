@@ -44,9 +44,9 @@ const App = () => {
       <Button handleClick= {() => addBadFeedback(bad + 1)} text='Bad' />
 
       <Header text='Statistics' />
-      <Display text="Good"/>
-      <Display text="Neutral"/>
-      <Display text="Bad"/>
+      <Display text="Good"/> {good}
+      <Display text="Neutral"/> {neutral}
+      <Display text="Bad"/> {bad}
     </div>
   )
 }
