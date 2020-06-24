@@ -13,7 +13,11 @@ const Button = (props) =>
     <button onClick={props.handleClick}>{props.text}</button>
   )
 
-
+const Display = (props) => {
+  return (
+    <p>{props.text}</p>
+  )
+}
 const App = () => {
 
   const [good, setGood] = useState(0)
@@ -32,7 +36,6 @@ const App = () => {
     setBad(newFeedback)
   }
 
-
   return (
     <div>
       <Header text='Give feedback' />
@@ -41,6 +44,9 @@ const App = () => {
       <Button handleClick= {() => addBadFeedback(bad + 1)} text='Bad' />
 
       <Header text='Statistics' />
+      <Display text="Good"/>
+      <Display text="Neutral"/>
+      <Display text="Bad"/>
     </div>
   )
 }
