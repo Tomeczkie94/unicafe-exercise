@@ -29,6 +29,7 @@ const Statistics = (props) => {
       <Display text="Bad" value= {props.bad}/>
       <Display text="All" value= {props.good + props.neutral + props.bad} />
       <Display text="Average" value= {(props.good * 1) + (props.bad * -1)/(props.good + props.neutral + props.bad)} />
+      Positive <p>{(props.good/(props.good + props.neutral + props.bad)) * 100}% </p>
     </div>
   )
 }
@@ -50,8 +51,6 @@ const App = () => {
   const addBadFeedback = () => {
     setBad(bad + 1)
   }
-
-  // const average = points/all;
 
   return (
     <div>
