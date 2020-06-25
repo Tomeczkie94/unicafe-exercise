@@ -22,16 +22,27 @@ const Display = (props) => {
 }
 
 const Statistics = (props) => {
-  return (
-    <div>
-      <Display text="Good" value= {props.good}/>
-      <Display text="Neutral"value= {props.neutral}/>
-      <Display text="Bad" value= {props.bad}/>
-      <Display text="All" value= {props.good + props.neutral + props.bad} />
-      <Display text="Average" value= {(props.good * 1) + (props.bad * -1)/(props.good + props.neutral + props.bad)} />
-      Positive <p>{(props.good/(props.good + props.neutral + props.bad)) * 100}% </p>
-    </div>
-  )
+
+  if(props.good > 0 || props.neutral > 0 || props.bad > 0) {
+
+    return (
+      <div>
+        <Display text="Good" value= {props.good}/>
+        <Display text="Neutral"value= {props.neutral}/>
+        <Display text="Bad" value= {props.bad}/>
+        <Display text="All" value= {props.good + props.neutral + props.bad} />
+        <Display text="Average" value= {(props.good * 1) + (props.bad * -1)/(props.good + props.neutral + props.bad)} />
+        Positive <p>{(props.good/(props.good + props.neutral + props.bad)) * 100}% </p>
+      </div>
+    )
+  }
+  else {
+    return (
+      <div>
+        <p>No feedback given</p>
+      </div>
+    )
+  }
 }
 
 const App = () => {
