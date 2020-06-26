@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
+import Header from './Header.js';
+import Button from './Button.js'
 import './index.css';
 
-const Header = (props) => {
-  return (
-      <h1>{props.text}</h1>
-  )
-}
 
-const Button = (props) =>
-  (
-    <button onClick={props.handleClick}>{props.text}</button>
-  )
+
+
 
 const Statistic  = (props) => {
   return (
@@ -20,10 +15,6 @@ const Statistic  = (props) => {
       <td>{props.value}</td>
     </tr>
   )
-}
-
-const Percenage = (props) => {
-  return (props.good/(props.good + props.neutral + props.bad)) * 100
 }
 
 const Statistics = (props) => {
