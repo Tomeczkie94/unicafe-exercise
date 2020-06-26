@@ -2,20 +2,14 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import Header from './Header.js';
 import Button from './Button.js'
+import Statistic from './Statistic.js'
 import './index.css';
 
 
 
 
 
-const Statistic  = (props) => {
-  return (
-    <tr>
-      <td>{props.text}</td>
-      <td>{props.value}</td>
-    </tr>
-  )
-}
+
 
 const Statistics = (props) => {
 
