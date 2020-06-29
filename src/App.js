@@ -3,7 +3,6 @@ import Header from './Header.js';
 import Button from './Button.js';
 import Statistics from './Statistics.js';
 
-
 const App = () => {
 
   const [good, setGood] = useState(0)
@@ -25,9 +24,9 @@ const App = () => {
   return (
     <div>
       <Header text='Give feedback' />
-      <Button handleClick= {addGoodFeedback} text='Good' />
-      <Button handleClick= {addNeutralFeedback} text='Neutral' />
-      <Button handleClick= {addBadFeedback} text='Bad' />
+      <Button handleClick={addGoodFeedback} text='Good' />
+      <Button handleClick={addNeutralFeedback} text='Neutral' />
+      <Button handleClick={addBadFeedback} text='Bad' />
       <Header text='Statistics' />
       <Statistics good={good} neutral={neutral} bad={bad} />
     </div>
