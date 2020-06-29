@@ -3,7 +3,7 @@ import Statistic from './Statistic.js'
 
 const Statistics = (props) => {
 
-  const hasVotes = (props.good + props.neutral + props.bad !==0)
+  const hasVotes = props.good + props.neutral + props.bad !==0
 
   if(hasVotes) {
     return (
